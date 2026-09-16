@@ -1,0 +1,31 @@
+{
+  "architecture": "Original ARNN",
+  "architecture_changed": false,
+  "training_cases": [
+    "chb01",
+    "chb02",
+    "chb03",
+    "chb04",
+    "chb05",
+    "chb06",
+    "chb07",
+    "chb08",
+    "chb09"
+  ],
+  "testing_cases": [
+    "chb10",
+    "chb11",
+    "chb12"
+  ],
+  "patient_overlap": false,
+  "epochs": 30,
+  "batch_size": 50,
+  "initial_learning_rate": 0.001,
+  "seed": 1111,
+  "input_shape": [
+    1024,
+    18
+  ],
+  "threshold": 0.5,
+  "total_training_seconds": 176.9904658794403
+}

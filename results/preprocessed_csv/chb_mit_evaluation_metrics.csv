@@ -1,0 +1,2 @@
+Dataset,Epochs,Batch_Size,Threshold,Test_Samples,Nonseizure_Test_Count,Seizure_Test_Count,Accuracy_Percent,F1,PR_AUC,ROC_AUC,True_Negative,False_Positive,False_Negative,True_Positive,Training_Seconds
+CHB-MIT,30,50,0.5,512,263,249,94.7265625,0.9469548133595285,0.9832972222137711,0.9839357429718876,244,19,8,241,1461.4580495357513

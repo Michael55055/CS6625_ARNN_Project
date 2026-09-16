@@ -1,0 +1,2 @@
+Test_Samples,Nonseizure_Test_Count,Seizure_Test_Count,Threshold,Accuracy,Accuracy_Percent,F1,PR_AUC,ROC_AUC,True_Negative,False_Positive,False_Negative,True_Positive,Dataset,Training_Cases,Testing_Cases,Patient_Wise_Split,Patient_Overlap,Epochs,Batch_Size,Training_Seconds,Evaluation_Seconds
+94950,94358,592,0.5,0.9385676671932596,93.85676671932596,0.09803618370187103,0.2603227176302134,0.7957607040580927,88800,5558,275,317,CHB-MIT Raw EDF,chb01-chb09,chb10-chb12,True,False,30,50,176.9904658794403,335.15309715270996
