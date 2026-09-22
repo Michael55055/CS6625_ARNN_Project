@@ -1,0 +1,46 @@
+{
+  "cases_used": [
+    "chb01",
+    "chb02",
+    "chb03",
+    "chb04",
+    "chb05",
+    "chb06",
+    "chb07",
+    "chb08",
+    "chb09",
+    "chb10",
+    "chb11",
+    "chb12"
+  ],
+  "training_cases": [
+    "chb01",
+    "chb02",
+    "chb03",
+    "chb04",
+    "chb05",
+    "chb06",
+    "chb07",
+    "chb08",
+    "chb09"
+  ],
+  "testing_cases": [
+    "chb10",
+    "chb11",
+    "chb12"
+  ],
+  "patient_wise_split": true,
+  "patient_overlap": [],
+  "segment_seconds": 4.0,
+  "stride_seconds": 4.0,
+  "preictal_label": 0,
+  "ictal_label": 1,
+  "preictal_definition": "Immediately preceding each seizure, with retained duration equal to the complete 4-second ictal duration.",
+  "summary_formats_supported": [
+    "Seizure Start Time",
+    "Seizure N Start Time"
+  ],
+  "normalization_performed": false,
+  "signal_extraction_performed": false,
+  "model_training_performed": false
+}

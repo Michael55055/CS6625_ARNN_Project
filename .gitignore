@@ -16,3 +16,4 @@ raw_edf/
 data/
 cache/
 checkpoints/
+prepared_data/

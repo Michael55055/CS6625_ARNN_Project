@@ -1,0 +1,24 @@
+{
+  "threshold": 0.5,
+  "threshold_selected_on_test": false,
+  "training_cases": [
+    "chb01",
+    "chb02",
+    "chb03",
+    "chb04",
+    "chb05",
+    "chb06",
+    "chb07",
+    "chb08",
+    "chb09"
+  ],
+  "testing_cases": [
+    "chb10",
+    "chb11",
+    "chb12"
+  ],
+  "negative_class": "Preictal",
+  "positive_class": "Ictal",
+  "preictal_definition": "Immediately before each seizure, with duration equal to that seizure",
+  "evaluation_device": "CPU"
+}

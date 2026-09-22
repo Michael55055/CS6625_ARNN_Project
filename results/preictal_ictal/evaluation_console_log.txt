@@ -1,0 +1,27 @@
+RAW CHB-MIT PREICTAL-VERSUS-ICTAL EVALUATION
+
+Device: CPU
+Training patients: chb01-chb09
+Testing patients: chb10-chb12
+Patient overlap: none
+Threshold: 0.5
+Threshold selected on test data: no
+
+Test samples: 1048
+Preictal samples: 524
+Ictal samples: 524
+
+Accuracy: 0.755725
+F1: 0.724138
+PR-AUC: 0.862762
+ROC-AUC: 0.834150
+Sensitivity: 0.641221
+Specificity: 0.870229
+Precision: 0.831683
+
+True negative: 456
+False positive: 68
+False negative: 188
+True positive: 336
+
+Evaluation seconds: 13.83

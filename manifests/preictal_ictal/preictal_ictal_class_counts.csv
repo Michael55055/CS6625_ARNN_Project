@@ -1,0 +1,5 @@
+Split,Class_Name,Label,Segment_Count
+test,Ictal,1,524
+test,Preictal,0,524
+train,Ictal,1,891
+train,Preictal,0,891

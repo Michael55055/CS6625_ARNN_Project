@@ -1,0 +1,204 @@
+======================================================================
+ORIGINAL ARNN WITH RAW PREICTAL-ICTAL DATA
+======================================================================
+Device: cuda
+GPU: Tesla T4
+Random seed: 1111
+Epochs: 30
+Batch size: 50
+Initial learning rate: 0.001
+Loading the training cache...
+Training signal shape: (1782, 1024, 18)
+Training label shape: (1782, 1)
+Preictal training segments: 891
+Ictal training segments: 891
+Model parameters: 31,861
+Train Epoch: 1 [Batch 1/36] Loss: 0.683910
+Train Epoch: 1 [Batch 10/36] Loss: 0.567149
+Train Epoch: 1 [Batch 20/36] Loss: 0.401498
+Train Epoch: 1 [Batch 30/36] Loss: 0.444177
+Train Epoch: 1 [Batch 36/36] Loss: 0.336090
+Epoch 1 completed | Loss: 0.402742 | Accuracy: 82.5477% | F1: 0.823396 | Time: 6.27 seconds
+Train Epoch: 2 [Batch 1/36] Loss: 0.500077
+Train Epoch: 2 [Batch 10/36] Loss: 0.280895
+Train Epoch: 2 [Batch 20/36] Loss: 0.221946
+Train Epoch: 2 [Batch 30/36] Loss: 0.261916
+Train Epoch: 2 [Batch 36/36] Loss: 0.347343
+Epoch 2 completed | Loss: 0.329088 | Accuracy: 86.0269% | F1: 0.855317 | Time: 5.93 seconds
+Train Epoch: 3 [Batch 1/36] Loss: 0.162594
+Train Epoch: 3 [Batch 10/36] Loss: 0.265747
+Train Epoch: 3 [Batch 20/36] Loss: 0.423248
+Train Epoch: 3 [Batch 30/36] Loss: 0.309048
+Train Epoch: 3 [Batch 36/36] Loss: 0.494010
+Epoch 3 completed | Loss: 0.306834 | Accuracy: 86.9809% | F1: 0.866359 | Time: 5.87 seconds
+Train Epoch: 4 [Batch 1/36] Loss: 0.302325
+Train Epoch: 4 [Batch 10/36] Loss: 0.423256
+Train Epoch: 4 [Batch 20/36] Loss: 0.260576
+Train Epoch: 4 [Batch 30/36] Loss: 0.309996
+Train Epoch: 4 [Batch 36/36] Loss: 0.112515
+Epoch 4 completed | Loss: 0.264482 | Accuracy: 88.8889% | F1: 0.884615 | Time: 5.89 seconds
+Train Epoch: 5 [Batch 1/36] Loss: 0.221164
+Train Epoch: 5 [Batch 10/36] Loss: 0.244840
+Train Epoch: 5 [Batch 20/36] Loss: 0.273102
+Train Epoch: 5 [Batch 30/36] Loss: 0.105486
+Train Epoch: 5 [Batch 36/36] Loss: 0.346606
+Epoch 5 completed | Loss: 0.238447 | Accuracy: 90.1796% | F1: 0.899367 | Time: 5.91 seconds
+Train Epoch: 6 [Batch 1/36] Loss: 0.199031
+Train Epoch: 6 [Batch 10/36] Loss: 0.129299
+Train Epoch: 6 [Batch 20/36] Loss: 0.517436
+Train Epoch: 6 [Batch 30/36] Loss: 0.129146
+Train Epoch: 6 [Batch 36/36] Loss: 0.140528
+Epoch 6 completed | Loss: 0.228566 | Accuracy: 91.1897% | F1: 0.910234 | Time: 5.87 seconds
+Train Epoch: 7 [Batch 1/36] Loss: 0.232513
+Train Epoch: 7 [Batch 10/36] Loss: 0.185627
+Train Epoch: 7 [Batch 20/36] Loss: 0.048466
+Train Epoch: 7 [Batch 30/36] Loss: 0.259733
+Train Epoch: 7 [Batch 36/36] Loss: 0.082129
+Epoch 7 completed | Loss: 0.178505 | Accuracy: 93.4343% | F1: 0.933711 | Time: 5.84 seconds
+Train Epoch: 8 [Batch 1/36] Loss: 0.187575
+Train Epoch: 8 [Batch 10/36] Loss: 0.052732
+Train Epoch: 8 [Batch 20/36] Loss: 0.292714
+Train Epoch: 8 [Batch 30/36] Loss: 0.160632
+Train Epoch: 8 [Batch 36/36] Loss: 0.035671
+Epoch 8 completed | Loss: 0.151640 | Accuracy: 94.5567% | F1: 0.945167 | Time: 5.84 seconds
+Train Epoch: 9 [Batch 1/36] Loss: 0.032855
+Train Epoch: 9 [Batch 10/36] Loss: 0.132917
+Train Epoch: 9 [Batch 20/36] Loss: 0.194825
+Train Epoch: 9 [Batch 30/36] Loss: 0.259572
+Train Epoch: 9 [Batch 36/36] Loss: 0.192648
+Epoch 9 completed | Loss: 0.183878 | Accuracy: 92.8732% | F1: 0.928127 | Time: 5.84 seconds
+Train Epoch: 10 [Batch 1/36] Loss: 0.247098
+Train Epoch: 10 [Batch 10/36] Loss: 0.125193
+Train Epoch: 10 [Batch 20/36] Loss: 0.258843
+Train Epoch: 10 [Batch 30/36] Loss: 0.162837
+Train Epoch: 10 [Batch 36/36] Loss: 0.002461
+Epoch 10 completed | Loss: 0.136408 | Accuracy: 95.0056% | F1: 0.949518 | Time: 6.09 seconds
+Learning rate reduced to 0.0001
+Train Epoch: 11 [Batch 1/36] Loss: 0.102980
+Train Epoch: 11 [Batch 10/36] Loss: 0.119026
+Train Epoch: 11 [Batch 20/36] Loss: 0.189417
+Train Epoch: 11 [Batch 30/36] Loss: 0.213237
+Train Epoch: 11 [Batch 36/36] Loss: 0.164918
+Epoch 11 completed | Loss: 0.097939 | Accuracy: 96.9136% | F1: 0.969014 | Time: 5.80 seconds
+Train Epoch: 12 [Batch 1/36] Loss: 0.098660
+Train Epoch: 12 [Batch 10/36] Loss: 0.187159
+Train Epoch: 12 [Batch 20/36] Loss: 0.140820
+Train Epoch: 12 [Batch 30/36] Loss: 0.112838
+Train Epoch: 12 [Batch 36/36] Loss: 0.045598
+Epoch 12 completed | Loss: 0.079894 | Accuracy: 97.1380% | F1: 0.971268 | Time: 5.98 seconds
+Train Epoch: 13 [Batch 1/36] Loss: 0.029422
+Train Epoch: 13 [Batch 10/36] Loss: 0.130228
+Train Epoch: 13 [Batch 20/36] Loss: 0.152006
+Train Epoch: 13 [Batch 30/36] Loss: 0.186932
+Train Epoch: 13 [Batch 36/36] Loss: 0.231414
+Epoch 13 completed | Loss: 0.078564 | Accuracy: 97.2503% | F1: 0.972332 | Time: 5.79 seconds
+Train Epoch: 14 [Batch 1/36] Loss: 0.100275
+Train Epoch: 14 [Batch 10/36] Loss: 0.017797
+Train Epoch: 14 [Batch 20/36] Loss: 0.133841
+Train Epoch: 14 [Batch 30/36] Loss: 0.160467
+Train Epoch: 14 [Batch 36/36] Loss: 0.154359
+Epoch 14 completed | Loss: 0.072788 | Accuracy: 97.4186% | F1: 0.974128 | Time: 5.96 seconds
+Train Epoch: 15 [Batch 1/36] Loss: 0.008804
+Train Epoch: 15 [Batch 10/36] Loss: 0.040962
+Train Epoch: 15 [Batch 20/36] Loss: 0.026374
+Train Epoch: 15 [Batch 30/36] Loss: 0.123028
+Train Epoch: 15 [Batch 36/36] Loss: 0.013487
+Epoch 15 completed | Loss: 0.072369 | Accuracy: 97.5309% | F1: 0.975197 | Time: 5.85 seconds
+Train Epoch: 16 [Batch 1/36] Loss: 0.069653
+Train Epoch: 16 [Batch 10/36] Loss: 0.068605
+Train Epoch: 16 [Batch 20/36] Loss: 0.032414
+Train Epoch: 16 [Batch 30/36] Loss: 0.040822
+Train Epoch: 16 [Batch 36/36] Loss: 0.023096
+Epoch 16 completed | Loss: 0.067730 | Accuracy: 97.7553% | F1: 0.977452 | Time: 5.94 seconds
+Train Epoch: 17 [Batch 1/36] Loss: 0.031358
+Train Epoch: 17 [Batch 10/36] Loss: 0.023856
+Train Epoch: 17 [Batch 20/36] Loss: 0.008532
+Train Epoch: 17 [Batch 30/36] Loss: 0.109316
+Train Epoch: 17 [Batch 36/36] Loss: 0.187941
+Epoch 17 completed | Loss: 0.066252 | Accuracy: 97.8676% | F1: 0.978652 | Time: 5.91 seconds
+Train Epoch: 18 [Batch 1/36] Loss: 0.029411
+Train Epoch: 18 [Batch 10/36] Loss: 0.089704
+Train Epoch: 18 [Batch 20/36] Loss: 0.015950
+Train Epoch: 18 [Batch 30/36] Loss: 0.034966
+Train Epoch: 18 [Batch 36/36] Loss: 0.053560
+Epoch 18 completed | Loss: 0.067027 | Accuracy: 97.8114% | F1: 0.978003 | Time: 5.92 seconds
+Train Epoch: 19 [Batch 1/36] Loss: 0.052898
+Train Epoch: 19 [Batch 10/36] Loss: 0.042307
+Train Epoch: 19 [Batch 20/36] Loss: 0.063595
+Train Epoch: 19 [Batch 30/36] Loss: 0.034730
+Train Epoch: 19 [Batch 36/36] Loss: 0.132985
+Epoch 19 completed | Loss: 0.061501 | Accuracy: 98.0359% | F1: 0.980237 | Time: 5.86 seconds
+Train Epoch: 20 [Batch 1/36] Loss: 0.018949
+Train Epoch: 20 [Batch 10/36] Loss: 0.043127
+Train Epoch: 20 [Batch 20/36] Loss: 0.060143
+Train Epoch: 20 [Batch 30/36] Loss: 0.021903
+Train Epoch: 20 [Batch 36/36] Loss: 0.018253
+Epoch 20 completed | Loss: 0.060794 | Accuracy: 97.9798% | F1: 0.979730 | Time: 5.85 seconds
+Learning rate reduced to 1e-05
+Train Epoch: 21 [Batch 1/36] Loss: 0.019034
+Train Epoch: 21 [Batch 10/36] Loss: 0.026148
+Train Epoch: 21 [Batch 20/36] Loss: 0.115272
+Train Epoch: 21 [Batch 30/36] Loss: 0.022781
+Train Epoch: 21 [Batch 36/36] Loss: 0.062510
+Epoch 21 completed | Loss: 0.055165 | Accuracy: 98.4848% | F1: 0.984772 | Time: 5.93 seconds
+Train Epoch: 22 [Batch 1/36] Loss: 0.021819
+Train Epoch: 22 [Batch 10/36] Loss: 0.028476
+Train Epoch: 22 [Batch 20/36] Loss: 0.026566
+Train Epoch: 22 [Batch 30/36] Loss: 0.014041
+Train Epoch: 22 [Batch 36/36] Loss: 0.017620
+Epoch 22 completed | Loss: 0.055537 | Accuracy: 98.4287% | F1: 0.984234 | Time: 5.93 seconds
+Train Epoch: 23 [Batch 1/36] Loss: 0.027642
+Train Epoch: 23 [Batch 10/36] Loss: 0.040253
+Train Epoch: 23 [Batch 20/36] Loss: 0.048606
+Train Epoch: 23 [Batch 30/36] Loss: 0.046311
+Train Epoch: 23 [Batch 36/36] Loss: 0.030677
+Epoch 23 completed | Loss: 0.054666 | Accuracy: 98.5410% | F1: 0.985344 | Time: 5.87 seconds
+Train Epoch: 24 [Batch 1/36] Loss: 0.028632
+Train Epoch: 24 [Batch 10/36] Loss: 0.040507
+Train Epoch: 24 [Batch 20/36] Loss: 0.036417
+Train Epoch: 24 [Batch 30/36] Loss: 0.010399
+Train Epoch: 24 [Batch 36/36] Loss: 0.014429
+Epoch 24 completed | Loss: 0.054549 | Accuracy: 98.4287% | F1: 0.984234 | Time: 5.90 seconds
+Train Epoch: 25 [Batch 1/36] Loss: 0.007238
+Train Epoch: 25 [Batch 10/36] Loss: 0.036098
+Train Epoch: 25 [Batch 20/36] Loss: 0.015791
+Train Epoch: 25 [Batch 30/36] Loss: 0.025221
+Train Epoch: 25 [Batch 36/36] Loss: 0.185176
+Epoch 25 completed | Loss: 0.054302 | Accuracy: 98.5410% | F1: 0.985311 | Time: 5.91 seconds
+Train Epoch: 26 [Batch 1/36] Loss: 0.080260
+Train Epoch: 26 [Batch 10/36] Loss: 0.071694
+Train Epoch: 26 [Batch 20/36] Loss: 0.112879
+Train Epoch: 26 [Batch 30/36] Loss: 0.059047
+Train Epoch: 26 [Batch 36/36] Loss: 0.118943
+Epoch 26 completed | Loss: 0.053554 | Accuracy: 98.5410% | F1: 0.985344 | Time: 5.90 seconds
+Train Epoch: 27 [Batch 1/36] Loss: 0.022984
+Train Epoch: 27 [Batch 10/36] Loss: 0.045401
+Train Epoch: 27 [Batch 20/36] Loss: 0.104865
+Train Epoch: 27 [Batch 30/36] Loss: 0.036791
+Train Epoch: 27 [Batch 36/36] Loss: 0.010267
+Epoch 27 completed | Loss: 0.053428 | Accuracy: 98.6532% | F1: 0.986486 | Time: 5.96 seconds
+Train Epoch: 28 [Batch 1/36] Loss: 0.038980
+Train Epoch: 28 [Batch 10/36] Loss: 0.034162
+Train Epoch: 28 [Batch 20/36] Loss: 0.038484
+Train Epoch: 28 [Batch 30/36] Loss: 0.029945
+Train Epoch: 28 [Batch 36/36] Loss: 0.023178
+Epoch 28 completed | Loss: 0.053299 | Accuracy: 98.6532% | F1: 0.986502 | Time: 5.82 seconds
+Train Epoch: 29 [Batch 1/36] Loss: 0.051348
+Train Epoch: 29 [Batch 10/36] Loss: 0.041331
+Train Epoch: 29 [Batch 20/36] Loss: 0.021106
+Train Epoch: 29 [Batch 30/36] Loss: 0.042450
+Train Epoch: 29 [Batch 36/36] Loss: 0.143092
+Epoch 29 completed | Loss: 0.053453 | Accuracy: 98.5971% | F1: 0.985884 | Time: 5.97 seconds
+Train Epoch: 30 [Batch 1/36] Loss: 0.025941
+Train Epoch: 30 [Batch 10/36] Loss: 0.126731
+Train Epoch: 30 [Batch 20/36] Loss: 0.031416
+Train Epoch: 30 [Batch 30/36] Loss: 0.018608
+Train Epoch: 30 [Batch 36/36] Loss: 0.006803
+Epoch 30 completed | Loss: 0.052583 | Accuracy: 98.6532% | F1: 0.986486 | Time: 5.81 seconds
+Learning rate reduced to 1.0000000000000002e-06
+======================================================================
+TRAINING COMPLETED
+Total training time: 177.18 seconds
+Checkpoint: /content/drive/MyDrive/CS6625/ARNN/CHB_MIT_preictal_ictal_ARNN/official_30epochs/raw_arnn_epoch_30.pt
+History: /content/drive/MyDrive/CS6625/ARNN/CHB_MIT_preictal_ictal_ARNN/official_30epochs/training_history.csv
+======================================================================

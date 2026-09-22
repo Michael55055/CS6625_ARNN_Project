@@ -169,3 +169,104 @@ The original model architecture comes from:
 https://github.com/Salim-Lysiun/ARNN
 
 The original `model.py` and `ARNN.py` files are preserved. The new scripts provide the raw-data preparation, training, evaluation, and patient-wise comparison workflow.
+
+---
+
+## Raw EDF preictal-versus-ictal extension
+
+This extension more closely matches the two classes in the original preprocessed CHB-MIT CSV files. It uses the unchanged original ARNN architecture.
+
+### Class definitions
+
+- Negative class: preictal
+- Positive class: ictal
+- Preictal interval: immediately before each seizure, with duration equal to that seizure
+- Segment length: 4 seconds
+- Stride: 4 seconds
+- Segment overlap: none
+- Sampling rate: 256 Hz
+- Channels: 18 common bipolar EEG channels
+
+### Patient-wise split
+
+- Training: `chb01` through `chb09`
+- Testing: `chb10`, `chb11`, and `chb12`
+- Patient overlap: none
+- Training preictal segments: 891
+- Training ictal segments: 891
+- Testing preictal segments: 524
+- Testing ictal segments: 524
+- Normalization statistics were calculated from training patients only
+- Random seed: 1111
+- Decision threshold: 0.5
+- The test patients were not used to select the threshold
+
+### Prepare model-ready segments
+
+The audited manifest is included at:
+
+```text
+manifests/preictal_ictal/preictal_ictal_manifest.csv
+```
+
+```bash
+python prepare_preictal_ictal_chbmit.py \
+  --raw_folder /path/to/raw_edf \
+  --manifest manifests/preictal_ictal/preictal_ictal_manifest.csv \
+  --output_folder /path/to/prepared_data
+```
+
+### Train the original ARNN
+
+```bash
+python train_preictal_ictal_arnn.py \
+  --cache_folder /path/to/prepared_data \
+  --output_folder /path/to/training_output \
+  --epochs 30 \
+  --batch_size 50 \
+  --learning_rate 0.001 \
+  --seed 1111
+```
+
+### Evaluate on separate patients
+
+```bash
+python evaluate_preictal_ictal_arnn.py \
+  --cache_folder /path/to/prepared_data \
+  --checkpoint /path/to/training_output/raw_arnn_epoch_30.pt \
+  --output_folder /path/to/evaluation_output \
+  --batch_size 50 \
+  --threshold 0.5
+```
+
+The evaluator works with either CPU or GPU.
+
+### Patient-wise test results
+
+| Metric | Result |
+|---|---:|
+| Test samples | 1,048 |
+| Accuracy | 75.57% |
+| F1 | 0.7241 |
+| PR-AUC | 0.8628 |
+| ROC-AUC | 0.8342 |
+| Sensitivity | 0.6412 |
+| Specificity | 0.8702 |
+| True negative | 456 |
+| False positive | 68 |
+| False negative | 188 |
+| True positive | 336 |
+
+### Interpretation
+
+The preprocessed CSV experiment achieved higher performance, but it used a random segment-level split.
+
+The raw EDF preictal-versus-ictal experiment used completely separate patients for testing. Its lower performance shows that generalization to unseen patients is more difficult.
+
+The raw nonseizure-versus-ictal experiment is a different seizure-detection task. It is not a direct reproduction of the CSV experiment because the negative-class definitions are different.
+
+Detailed files are available under:
+
+```text
+results/preictal_ictal/
+```
