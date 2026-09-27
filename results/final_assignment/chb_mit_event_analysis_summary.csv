@@ -1,0 +1,15 @@
+Metric,Value,Analysis_Type
+Threshold,0.5,Prespecified primary
+Included_Test_Events,36,Primary
+Pooled_Ictal_Sensitivity_All_Test_Segments,0.6412213740458015,Primary
+Median_Event_Ictal_Sensitivity,0.3416666666666667,Required event-level analysis
+Mean_Event_Ictal_Sensitivity,0.3997664772908086,Supplementary
+Long_Event_ID,chb11_event_003,Event influence
+Long_Event_EDF,chb11_99.edf,Event influence
+Long_Event_Total_Matched_Segments,376,Event influence
+Long_Event_Ictal_Segments,188,Event influence
+Long_Event_Ictal_Sensitivity,0.9361702127659575,Event influence
+Pooled_Ictal_Sensitivity_Without_Long_Event,0.47619047619047616,Post hoc supplementary
+All_Audited_Seizure_Events,98,Audit
+Included_Seizure_Events,84,Audit
+Excluded_Seizure_Events,14,Audit

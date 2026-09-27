@@ -270,3 +270,71 @@ Detailed files are available under:
 ```text
 results/preictal_ictal/
 ```
+
+
+## Final Assignment Analysis
+
+The final milestone evaluates the original ARNN architecture under three separate CHB-MIT protocols and includes the completed UPenn/Mayo reproduction as a separate baseline study.
+
+### CHB-MIT protocols
+
+| Experiment | Classes | Evaluation split | Test composition |
+|---|---|---|---|
+| Preprocessed CSV baseline | Preictal vs. ictal | Original random 75/25 segment-level split | 263 preictal and 249 ictal segments |
+| Raw-EDF detection | All nonseizure vs. ictal | chb01-chb09 training; chb10-chb12 testing | 94,358 nonseizure and 592 ictal segments |
+| Raw-EDF matched classes | Preictal vs. ictal | chb01-chb09 training; chb10-chb12 testing | 524 preictal and 524 ictal segments |
+
+The experiments must be interpreted separately. They differ in split policy, preprocessing, segment selection, class definitions, and test prevalence. Therefore, score differences cannot be attributed to the patient split alone.
+
+### Preictal definition
+
+For the raw-EDF matched-classes experiment, preictal is defined as the interval immediately before each seizure. Its retained duration is matched to that seizure's duration using complete non-overlapping four-second segments. This is an event-matched operational definition and not a fixed advance-warning horizon.
+
+A seizure event is excluded when a complete valid preictal interval cannot be created, when the interval overlaps another seizure, or when the seizure EDF lacks the selected 18-channel montage. The audit contains 98 seizure events: 84 included and 14 excluded. Thirteen exclusions resulted from EDF files that failed the 18-channel audit, and one resulted from a preictal interval overlapping another seizure.
+
+### Main CHB-MIT results
+
+| Experiment | Accuracy | Ictal precision | Ictal sensitivity | F1 | AP | ROC-AUC |
+|---|---:|---:|---:|---:|---:|---:|
+| Preprocessed CSV baseline | 0.9473 | 0.9269 | 0.9679 | 0.9470 | 0.9833 | 0.9839 |
+| Raw-EDF detection | 0.9386 | 0.0540 | 0.5355 | 0.0980 | 0.2603 | 0.7958 |
+| Raw-EDF matched classes | 0.7557 | 0.8317 | 0.6412 | 0.7241 | 0.8628 | 0.8342 |
+
+The raw-EDF detection test set is naturally imbalanced. An always-nonseizure classifier would obtain 99.38% accuracy, which is higher than the model's 93.86% accuracy. Therefore, accuracy alone is misleading for this experiment.
+
+### Patient and event analysis
+
+In the matched-classes experiment, ictal sensitivity was 0.8165 for chb10, 0.9353 for chb11, and 0.2757 for chb12. The lower sensitivity for chb12 shows substantial variation across unseen patients.
+
+The test set contains 36 included seizure events. Median event-level ictal sensitivity was 0.3417. The long seizure in chb11_99.edf contributed 188 ictal and 188 matched preictal segments, or 376 of the 1,048 test segments. Its ictal sensitivity was 0.9362. When this event was omitted in a post hoc supplementary check, pooled ictal sensitivity decreased from 0.6412 to 0.4762. The full 1,048-segment result remains the primary result, and neither test analysis was used for threshold selection.
+
+### Decision threshold
+
+All required CHB-MIT results use the prespecified decision threshold of 0.5. No threshold was selected using chb10-chb12.
+
+### UPenn/Mayo baseline
+
+The UPenn/Mayo reproduction contains 120 completed runs: 10 runs for each of Dog_1-Dog_4 and Patient_1-Patient_8. It uses the original participant-specific random segment-level split and is not a held-out-patient evaluation. Only final accuracy was verifiable from the saved run outputs. Unavailable metrics are reported as NA in results_week9.csv.
+
+### Final-assignment outputs
+
+- `results/final_assignment/results_week9.csv`: three CHB-MIT experiment rows and 120 UPenn/Mayo participant-run rows.
+- `results/final_assignment/chb_mit_event_analysis.csv`: one row for each included test seizure.
+- `results/final_assignment/chb_mit_event_analysis_summary.csv`: pooled, median-event, and long-event sensitivity results.
+- `results/final_assignment/chb_mit_exclusion_summary.csv`: excluded-event counts and reasons.
+- `results/final_assignment/preictal_ictal_metrics_by_patient.csv`: chb10, chb11, and chb12 results.
+- `results/final_assignment/preictal_ictal_pr_curve.png`: labeled precision-recall curve.
+- `results/final_assignment/preictal_ictal_confusion_matrix.png`: labeled confusion matrix.
+
+### Reproduce the event analysis
+
+```bash
+python analyze_chb_mit_events.py \
+  --predictions results/preictal_ictal/preictal_ictal_test_predictions.csv \
+  --event_audit manifests/preictal_ictal/preictal_ictal_event_audit.csv \
+  --output_folder results/final_assignment \
+  --threshold 0.5 \
+  --long_event_id chb11_event_003
+```
+
+Raw EDF recordings, NumPy signal caches, trained checkpoints, and credentials are intentionally omitted because of dataset restrictions, size, and security considerations.
